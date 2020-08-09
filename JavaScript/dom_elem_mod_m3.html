@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        // function changeStyle() {
+        //     var p = document.getElementById('p1');
+        //     p.style.color = 'red';
+        //     p.style.fontFamily = 'Century Schoolbook';
+        //     p.style.fontStyle = 'italic';
+        // }
+        function hide() {
+            var p = document.getElementById("p1");
+            p.style.visibility = "hidden"
+        }
+    </script>
+</head>
+
+<body>
+    <p id="p1">This is a paragraph</p>
+    <!-- <input type="button" onclick="changeStyle()" value="눌러" /> -->
+    <input type="button" onclick="hide()" value="숨기기" />
+    <input type="button" onclick="document.getElementById('p1').style.visibility='visible'" value="보이기" />
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+h1 {
+  background: url("{@base-url}/image/bg.png");
+}
+.class {
+  filter: ms:alwaysHasItsOwnSyntax.For.stuff();
+}

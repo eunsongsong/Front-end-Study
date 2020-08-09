@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #check {
+            margin: 0 auto;
+            margin-left: 400px;
+            padding: 10px;
+            float: left;
+            text-align: center;
+        }
+
+        form {
+            /* padding-left: 50%; */
+            margin: 0 auto;
+            /* margin-left: 400px; */
+            /* margin-right: 200px; */
+            padding: 10px;
+            float: left;
+        }
+    </style>
+    <stript>
+        <script>
+            let array = [{
+                pno: 'p001',
+                pname: '전자인사관리시스템',
+                pmgr: '홍길동',
+                pdescription: '전자인사관리 홍길동'
+            }, {
+                pno: 'p002',
+                pname: '도서관리 시스템',
+                pmgr: '김길동',
+                pdescription: '도서관리 길길동'
+            }, {
+                pno: 'p003',
+                pname: '사이버 서비스 시스템',
+                pmgr: '박길동',
+                pdescription: '사이버 서비스 박길동'
+            }, {
+                pno: 'p004',
+                pname: '스마트카드 모바일 티머니 앱',
+                pmgr: '이길동',
+                pdescription: '스마트카드 모바일 이길동'
+            },
+            {
+                pno: 'p005',
+                pname: '모바일 소셜네트워크 서비스 앱',
+                pmgr: '최길동',
+                pdescription: '모바일 소셜네트워크 최길동'
+            },
+            {
+                pno: 'p006',
+                pname: '안드로이드 게임 앱',
+                pmgr: '윤길동',
+                pdescription: '안드로이드 게임 앱 윤길동'
+            }];
+
+            function radio_check() {
+                document.getElementById('input_pn').value = "";
+                document.getElementById('input_admin').value = "";
+                document.getElementById('input_des').value = "";
+
+                var len = document.getElementsByName("n").length;
+                for (var i = 0; i < len; i++) {
+                    if (document.getElementsByName("n")[i].checked) {
+                        document.getElementById('input_pn').value += array[i].pno;
+                        document.getElementById('input_admin').value += array[i].pmgr;
+                        document.getElementById('input_des').value += array[i].pdescription;
+                    }
+                }
+            }
+        </script>
+    </stript>
+
+</head>
+
+<body>
+
+    <div id="check">
+        <div>프로젝트 안내</div>
+        <hr>
+        <table id="table">
+            <tr>
+                <th>선택</th>
+                <th>프로젝트명</th>
+            </tr>
+            <tr>
+                <td><input type="radio"  name="n" onclick="radio_check()"></td>
+                <td>전자 인사관리 시스템</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="n" onclick="radio_check()"></td>
+                <td>도서관리 시스템</td>
+            </tr>
+            <tr>
+                <td><input type="radio"  name="n" onclick="radio_check()"></td>
+                <td>사이버 서비스 시스템</td>
+            </tr>
+            <tr>
+                <td><input type="radio"  name="n" onclick="radio_check()"></td>
+                <td>스마트카드 모바일 티머니 앱</td>
+            </tr>
+            <tr>
+                <td><input type="radio" name="n" onclick="radio_check()"></td>
+                <td>모바일 소셜네트워크서비스 앱</td>
+            </tr>
+            <tr>
+                <td><input type="radio"  name="n" onclick="radio_check()"></td>
+                <td>안드로이드 게임 앱</td>
+            </tr>
+        </table>
+        <hr>
+
+        <form>
+            번호<input id="input_pn" value="">
+            <br>
+            관리자<input id="input_admin" value="">
+            <br>
+            설명<input id="input_des" value="">
+            
+        </form>
+
+    </div>
+
+
+
+</body>
+
+</html>

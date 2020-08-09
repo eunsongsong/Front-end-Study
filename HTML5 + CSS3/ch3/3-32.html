@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Selector Basic</title>
+    <style>
+        p {counter-increment: rint;}
+        p::before {content: counter(rint) ".";}
+        p::after {content: " - " attr(data-page) " page";}
+        p::first-letter{font-size: 2em;}
+    </style>
+</head>
+<body>
+    <h1>Hello</h1>
+    <p data-page="52">Good morning</p>
+    <p data-page="167">Good afternoon</p>
+    <p data-page="192">Good evening</p>
+    <p data-page="273">Good night</p>
+</body>
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tablet PC Layout</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- 초기화 -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Helvetica', sans-serif;
+            /* 목록의 레이아웃이 깨지지 않게 하기 위해 처리 
+            너비가 760픽셀 이하로 내려가지 않게 만들어줌 */
+            min-width: 760px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+    <!-- 헤더 -->
+    <style>
+        #main_header {
+            /* 세로로 중앙정렬 */
+            height: 0px;
+            line-height: 60px;
+            /* 왼쪽에서 10만큼 */
+            padding-left: 10px;
+            /* 아래 부분에 라인 그리기 */
+            border-bottom: 1px solid black;
+            /* 배경 색 */
+            background: teal;
+            color: white;
+        }
+    </style>
+    <!-- 내비게이션 -->
+    <style>
+        #main_gnb {
+            overflow: hidden;
+            /* 태그 모양 */
+            border-bottom: 1px solid black;
+            background: black;
+        }
+
+        #main_gnb>ul.left {
+            overflow: hidden;
+            float: left;
+        }
+
+        #main_gnb>ul.right {
+            overflow: hidden;
+            float: right;
+        }
+
+        #main_gnb>ul.left>li {
+            float: left;
+        }
+
+        #main_gnb>ul.right>li {
+            float: left;
+        }
+
+        #main_gnb a {
+            /* 레이아웃 구성 */
+            display: block;
+            /* 세로 가로 */
+            padding: 10px 20px;
+
+            /* 색상 설정 */
+            /* 세로 줄 */
+            border-left: 1px solid #5F6673;
+            border-right: 1px solid #242A37;
+            /* 텍스트 색상 및 텍스트 굵게 */
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <!-- 콘텐츠 -->
+    <style>
+        #wrap {
+            overflow: hidden;
+        }
+
+        #wrap>#main_lnb {
+            float: left;
+            width: 200px;
+        }
+
+        #wrap>#content_wrap {
+            float: left;
+            width: 100%;
+            margin-right: -200px;
+        }
+
+        #wrap>#content_wrap>#content {
+            padding-right: 200px;
+        }
+    </style>
+    <!-- 수직 목록 -->
+    <style>
+        #wrap {
+            background: powderblue;
+        }
+
+        #main_lnb>ul>li>a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            padding-left: 15px;
+
+            border-top: 1px solid #969696;
+            border-bottom: 1px solid #6298B2;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+    <!-- 본문 -->
+    <style>
+        #content {
+            background: white;
+            border-left: 1px solid black;
+        }
+
+        article {
+            padding: 10px;
+        }
+    </style>
+    <!-- 푸터 -->
+    <style>
+        #main_footer{
+            padding: 10px;
+            border-top: 3px solid black;
+            text-align: center;
+        }
+    </style>
+    <!-- 고정 바 -->
+</head>
+
+<body>
+    <!-- 헤더 -->
+    <header id="main_header">
+        <h1>Fluid</h1>
+    </header>
+    <!-- 내비게이션 -->
+    <nav id="main_gnb">
+        <ul class="left">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+        <ul class="right">
+            <li><a href="#">Button</a></li>
+            <li><a href="#">Button</a></li>
+        </ul>
+    </nav>
+    <!-- 콘텐츠 -->
+    <div id="wrap">
+        <nav id="main_lnb">
+            <ul>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+                <li><a href="#">Button</a></li>
+            </ul>
+        </nav>
+        <div id="content_wrap">
+            <div id="content">
+                <article>
+                    <h1>Hello</h1>
+                    <p>Good morning</p>
+                    <p>Good afernoon</p>
+                </article>
+                <article>
+                    <h1>Hello</h1>
+                    <p>Good morning</p>
+                    <p>Good afernoon</p>
+                </article>
+                <article>
+                    <h1>Hello</h1>
+                    <p>Good morning</p>
+                    <p>Good afernoon</p>
+                </article>
+            </div>
+        </div>
+    </div>
+    <footer id="main_footer">
+        <h3>HTML + CSS3 Basic</h3>
+        <address>Website Layout Basic</address>
+    </footer>
+</body>
+
+</html>

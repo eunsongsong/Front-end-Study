@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS3 Property Basic</title>
+    <Style>
+        .box {
+            width: 100px; height: 100px;
+
+            /* 태그가 위에서 아래로 순서대로 배치 */
+            /* position: static; */
+
+            /* 초기 위치 상태에서 상하좌우로 위치 이동 */
+            /* position: relative; */
+
+            /* 절대 위치 좌표 */
+            position: absolute;
+            
+            /* 화면을 기준으로 절대 위치 좌표 */
+            /* position: absolute; */
+        }
+        .red {
+            background-color: red;
+            left: 10px; top: 10px;
+            z-index: 100;
+            }
+        .green {
+            background-color: green;
+            left: 50px; top: 50px;
+            z-index: 1;
+            }
+        .blue {
+            background-color: blue;
+            left: 90px; top: 90px;
+            }
+    </Style>
+</head>
+<body>
+    <div class="box red"></div>
+    <div class="box green"></div>
+    <div class="box blue"></div>
+</body>
+</html>

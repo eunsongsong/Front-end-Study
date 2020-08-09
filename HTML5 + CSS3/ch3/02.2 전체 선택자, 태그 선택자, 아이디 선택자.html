@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS3 Selector Basic</title>
+        <style>
+            /* 전체 선택자 */
+            * {
+                color: rgb(255, 187, 0);
+            }
+            /* 태그 선택자 */
+            h2 {
+                color: red;
+            }
+            /* 아이디 선택자 */
+            #header {
+                width: 800px; margin: 0 auto;
+                background: slateblue;
+            }
+
+            #wrap {
+                width: 800px; margin: 0 auto;
+                overflow: hidden;
+            }
+
+            #aside {
+                width: 200px; float: left;
+                background: teal;
+            }
+
+            #content {
+                width: 600px; float: left;
+                background: violet;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Hello :)</h2>
+        <div id="header">
+            <h1>Header</h1>
+        </div>
+        <div id="wrap">
+            <div id="aside">
+                <h1>Aside</h1>
+            </div>
+            <div id="content">
+                <h1>Content</h1>
+            </div>
+        </div>
+    </body>
+</html>

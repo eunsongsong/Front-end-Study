@@ -1,0 +1,13 @@
+@base-url:"https://multicampus.sc";
+
+h1 {
+    background:url("{@base-url}/image/bg.png")
+    
+    // 이렇게 쓰면 안됨!!
+    // background:url(@base-url+"/image/bg.png")
+}
+
+
+.class {
+    filter: ~"ms:alwaysHasItsOwnSyntax.For.stuff()";
+}

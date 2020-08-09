@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #graph {
+            width: 610px;
+            border: 3px solid black;
+        }
+
+        .bar {
+            width: 10px;
+            height: 50px;
+            background-color: palegreen;
+            margin: 5px;
+
+            /* transition-property: background-color, width;
+            transition-duration: 1s, 5s; */
+            /* property duration function delay 순서로 입력 */
+            transition: background-color 1s ease, width 5s linear 1s;
+        }
+
+        #graph:hover>.bar {
+            width: 600px;
+        }
+
+        #graph:hover>.bar:nth-child(1) {
+            background-color: deepskyblue;
+            width: 250px;
+        }
+
+        #graph:hover>.bar:nth-child(2) {
+            background-color: orange;
+            width: 300px;
+        }
+
+        #graph:hover>.bar:nth-child(3) {
+            background-color: mediumvioletred;
+            width: 400px;
+        }
+
+        #graph:hover>.bar:nth-child(4) {
+            background-color: mediumpurple;
+            width: 200px;
+        }
+
+        #graph:hover>.bar:nth-child(5) {
+            background-color: lime;
+            width: 400px;
+        }
+
+        .bar:nth-child(1) {
+            /* transition-delay: 0s; */
+            /* transition-timing-function: linear; */
+            transition-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+
+        .bar:nth-child(2) {
+            /* transition-delay: 1s; */
+            transition-timing-function: ease;
+        }
+
+        .bar:nth-child(3) {
+            /* transition-delay: 2s; */
+            transition-timing-function: ease-in;
+        }
+
+        .bar:nth-child(4) {
+            /* transition-delay: 3s; */
+            transition-timing-function: ease-in-out;
+        }
+
+        .bar:nth-child(5) {
+            /* transition-delay: 4s; */
+            transition-timing-function: ease-out;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS3 Transition Graph</h1>
+    <div id="graph">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </div>
+</body>
+
+</html>

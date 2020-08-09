@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        var w;
+        function openWindow() {
+            w=window.open('http://www.google.com','_blank','width=300px','height=300px');
+            w.moveTo(0,0);
+        }
+        function moveWindow() {
+            w.moveBy(10,10);
+            w.focus();
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button id="button">클릭</button> -->
+    <!-- <a id="button", href="http://google.com">버튼</a> -->
+    <form>
+        <input type="button" value="구글 창 열기" onclick="openWindow()" />
+        <input type="button" value="구글 창 이동" onclick="moveWindow()" />
+    </form>
+</body>
+
+</html>

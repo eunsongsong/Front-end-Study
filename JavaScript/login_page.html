@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Login Page</title>
+    
+        <style>
+            #title {
+                color: orangered;
+            }
+            #login_form {
+                width: 200px;
+                margin: 20px auto;
+            }
+            #login_form > #login_btn {
+                background-color:beige;
+                width: 180px;
+                height: 50px;
+                margin-top: 10px;
+            }
+            #login_form > #id_text, #login_form > #pw_text {
+                color: blue;
+            }
+        </style>
+
+    </head>
+
+    <body>
+
+        <p id="title" align="center">회원 로그인</p>
+        <p align="center">로그인이 필요한 서비스입니다.<br>로그인 해주세요</p><br>
+        
+        <div id="login_form">
+        <span id="id_text">아이디</span> <input id="id"  value="" size="20" autofocus="">
+        <br>
+        <span id="pw_text">비밀번호</span> <input id="password" value="" size="20">
+        <br>
+        <button type="submit" id="login_btn" onclick="cheak()">로그인</button>
+        </div>
+        
+    <script>
+        function cheak() {
+            var userid = document.getElementById('id');
+            var useridStr = userid.value;
+
+            if(useridStr == ''){
+                alert('아이디를 입력하십시오.');
+            } 
+
+            var userpw = document.getElementById('password');
+            var userpwStr = userpw.value;
+            
+            if(userpwStr == ''){
+                alert('비밀번호를 입력하십시오.')
+            }
+
+            if(useridStr != 'react' && useridStr != 'react' && userpwStr != '' && useridStr != ''){
+                alert('홍길동님 로그인 실패하였습니다.\n아이디와 비밀번호를 확인하시기 바랍니다.');
+            }
+
+            if(useridStr == 'react' && userpwStr == 'react'){
+                alert('로그인 성공하였습니다.');
+                window.location.href = "login_success_page.html";
+            }
+        }
+    </script>
+    
+    </body>
+</html>

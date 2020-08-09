@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>login page</title>
+    <style>
+        h2 {
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 100px;
+            color: cornflowerblue;
+        }
+
+        p {
+            padding: 3px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        form {
+            /* padding-left: 50%; */
+            margin: 0 auto;
+            margin-left: 400px;
+            /* margin-right: 200px; */
+            padding: 10px;
+            /* text-align: center; */
+            float: left;
+        }
+
+        #login_btn {
+            display: block;
+            /* text-decoration-line: 100px; */
+            /* padding-left: 300px; */
+            float: right;
+            margin-left: 10px;
+        }
+
+        
+    </style>
+    <script>
+
+        // function User_info(id, password) {
+        //     this.id = id;
+        //     this.password = password;
+        // }
+        // User_info.prototype.info = function () {
+
+        // }
+
+        // function User() {
+        //     this.users = [];
+        // }
+        // User.prototype.input_user = function (id, password) {
+        //     this.users.push(new Account(id, password));
+        // };
+        // User.prototype.deposit = function (id, password) {
+        //     for (let acc of this.accs) {
+        //         if (acc.id == id) {
+        //             acc.password += password;
+        //         }
+        //     }
+        // }
+        // User.prototype.withdraw = function (id, password) {
+        //     for (let acc of this.accs) {
+        //         if (acc.id == id) {
+        //             acc.password -= password;
+        //         }
+        //     }
+        // }
+        // User.prototype.info = function (id) {
+        //     for (let acc of this.accs) {
+        //         if (acc.id == id) {
+        //             acc.info();
+        //         }
+        //     }
+        // }
+        // User.prototype.all_info = function () {
+        //     for (let acc of this.accs) {
+        //         acc.info();
+        //     }
+        // }
+
+        function login() {
+            let input_id = document.getElementById("user_id").value;
+            let input_password = document.getElementById("password").value;
+
+            if (input_id == "") {
+                alert("아이디를 입력하십시오");
+            }
+            else if (input_password == "") {
+                alert("비밀번호를 입력하십시오");
+            }
+            else {
+
+                if (input_id == 'react' && input_password == 'react') {
+                    window.location.href = "project.html"
+                }
+                else {
+
+                    alert('로그인에 실패하였습니다.\n아이디와 비밀번호를 확인하시기 바랍니다.');
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>회원 로그인</h2>
+    <p>로그인이 필요한 페이지입니다.</p>
+    <p>로그인해주세요.</p>
+    <form>
+        아이디<input id="user_id" type="text" value="" size="20">
+        <br>
+        비밀번호<input id="password" type="password" value="" size="20">
+        <input id="login_btn" type="button" value="로그인" onclick="login()">
+
+    </form>
+
+</body>
+
+</html>

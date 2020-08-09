@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        window.onload = function() {
+            var btn = document.getElementById('button');
+            btn.onclick = function() {
+                // alert('Click');
+                return true;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <button id="button">클릭</button> -->
+    <!-- <a id="button", href="http://google.com">버튼</a> -->
+    <form>
+        <input type="button" value="구글 창 열기" onclick="window.open('http:\/\/www.google.com','_blank', 'width=30', 'height=30');" />
+        <input type="button" value="구글 창 이동" onclick="moveWindow();"" />
+    </form>
+</body>
+
+</html>

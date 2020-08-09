@@ -1,0 +1,16 @@
+div {
+  background: black;
+}
+div:hover {
+  background: white;
+}
+div a {
+  background: red;
+  color: white;
+}
+div a:hover {
+  background: blue;
+}
+div a:hover {
+  background: green;
+}

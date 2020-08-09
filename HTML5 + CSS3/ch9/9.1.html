@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box{
+            width: 100px; height:100px;
+            background-color: cadetblue;
+
+            /* -ms-transition-duration: 2s;
+            -moz-transition-duration: 2s;
+            -webkit-transition-duration: 2s; */
+            /* 2초 동안 변경 속성이 사용됨 */
+            transition-duration: 2s;
+        }
+        /* 마우스를 올렸을 때 사이즈 커짐 */
+        .box:hover{
+            width: 200px; height: 300px;
+        }
+        /* 마우스를 클릭했을 때 색 바뀜 */
+        .box:active{
+            background-color: coral;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

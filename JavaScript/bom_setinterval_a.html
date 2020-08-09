@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        function changeColor() {
+            setInterval(flashText, 500);
+        }
+        function flashText() {
+            var elem=document.getElementById("target");
+            if(elem.style.color=='red'){
+                elem.style.color='blue';
+            } else{
+                elem.style.color='red';
+            }
+            if(elem.style.background=='green'){
+                elem.style.background='yellow';
+            } else{
+                elem.style.background='green'
+            }
+        }
+        window.onload = function() {
+            setTimeout(stopTextColor,3000)
+        }
+        function stopTextColor() {
+            clearInterval(id);
+        }
+    </script>
+</head>
+
+<body onload="changeColor();">
+    <div id="target">
+        <p>This is a Text</p>
+    </div>
+    <button onclick="stopTextColor();">중지</button>
+</body>
+
+</html>

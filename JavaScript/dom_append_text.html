@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <script>
+        function addtext(txt) {
+            var txnode = document.createTextNode(txt);
+            var node = document.getElementById('target');
+            node.appendChild(txnode);
+        }
+    </script>
+</head>
+
+<body>
+    <div id="target" style="font:20px bold"; onclick="addtext('텍스트 추가')">클릭</div>
+</body>
+
+</html>
